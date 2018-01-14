@@ -2,9 +2,40 @@
 <html>
 <head>
 	<title>The Ultimate Black Mirror Quiz!</title>
+	<!-- LINKS -->
 	<meta charset="utf-8">
+	<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+	<link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
-
+	<div class="title">
+	<h1>Black Mirror Quiz</h1>
+	</div>
+	<!-- FORM -->
+	<form id ="js-qform" class="formbox">
+		<h2>
+			<span class="js-question">Which of these is NOT in the Black Museum's collection?</span>
+		</h2>
+		<h3>
+			Correct Answers: <span class="js-score">0</span> out of 10
+		</h3>
+		<!-- OPTIONS -->
+		<input type="radio" name="option" value="1" checked>
+		<span class="js-ans1"> Arkangel tablet</span> <br>
+		<input type="radio" name="option" value="2" >
+		<span class="js-ans2"> Physical sensation hairnet</span> <br>
+		<input type="radio" name="option" value="3" >
+		<span class="js-ans3"> Conscious stuffed monkey </span> <br>
+		<input type="radio" name="option" value="4" >
+		<span class="js-ans4"> A human heart</span> <br> 
+		<h3>Question # <span class="js-qNum">1</span> of 10</h3>
+		<div>
+			<button type="button">ENTER</button>
+		</div>
+	</form>
+	<section id="js-final" hidden>
+		im hidden
+	</section>
 </body>
 </html>
