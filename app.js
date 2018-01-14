@@ -42,7 +42,7 @@ function update () {
 	//array of questions
 	var questions = [ null, 
 		"What was the name of the sci fi show in USS Calister?",
-		"What is the uk news show that frequently appears in Black Mirror?",
+		"What is the UK news show that frequently appears in Black Mirror?",
 		"What is the name of the AI device in White Christmas?",
 		"What is the name of simulated reality where the deceased can live permanently?",
 		"What's the name of the cartoon political candidate in Season 2?",
