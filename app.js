@@ -9,9 +9,9 @@ function submitA() {
 		if (questionNum >= 10) {
 			finishedQuiz();
 		} else {
+			this.reset();
 			update();
 		}
-		$('input[name=option]').prop('checked');
 	});
 }
 
