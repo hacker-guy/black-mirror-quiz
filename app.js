@@ -10,8 +10,8 @@ function submitA() {
 			finishedQuiz();
 		} else {
 			update();
-			questionNum++;
 		}
+		$('input[name=option]').prop('checked');
 	});
 }
 
@@ -30,14 +30,16 @@ function checkAns() {
 function displayAns(corr) {
 	if (corr === true) {
 		score++;
-		alert("true")
+		alert("Correct!")
 	} else {
-		alert("false");
+		alert("Incorrect!");
 	}
 }
 
 //chnage to the new question
 function update () {
+
+	questionNum++; //update num
 
 	//array of questions
 	var questions = [ null, 
@@ -65,13 +67,14 @@ function update () {
 					];
 
 
-	$(".js-question").html(questions[questionNum]); //-1 not needed because increment is after
-	$(".js-ans1").html(options[questionNum][0]);
-	$(".js-ans2").html(options[questionNum][1]);
-	$(".js-ans3").html(options[questionNum][2]);
-	$(".js-ans4").html(options[questionNum][3]);
+	$(".js-question").html(questions[questionNum-1]);
+	$(".js-ans1").html(options[questionNum-1][0]);
+	$(".js-ans2").html(options[questionNum-1][1]);
+	$(".js-ans3").html(options[questionNum-1][2]);
+	$(".js-ans4").html(options[questionNum-1][3]);
 
 	$(".js-score").html(score); //update score
+	$(".js-qNum").html(questionNum); //update question
 }
 
 //display the finished quiz screen

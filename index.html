@@ -4,38 +4,51 @@
 	<title>The Ultimate Black Mirror Quiz!</title>
 	<!-- LINKS -->
 	<meta charset="utf-8">
+	<!-- JS -->
 	<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
 	<script type="text/javascript" src="app.js"></script>
+	 <!-- Normalize.css, a cross-browser reset file -->
+ 	 <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.css" rel="stylesheet">
+	<!-- CSS STYLE -->
 	<link rel="stylesheet" type="text/css" href="main.css">
+	<!-- FONTS -->
+	<link href="https://fonts.googleapis.com/css?family=Eczar|Lora|Source+Serif+Pro" rel="stylesheet">
 </head>
 <body>
 	<div class="title">
-	<h1>Black Mirror Quiz</h1>
+		<img src="images/logo.webp" alt="logo" class="logo">
+	<h1>BLACK MIRROR QUIZ</h1>
 	</div>
-	<!-- FORM -->
-	<form id ="js-qform" class="formbox">
-		<h2>
-			<span class="js-question">Which of these is NOT in the Black Museum's collection?</span>
-		</h2>
-		<h3>
-			Correct Answers: <span class="js-score">0</span> out of 10
-		</h3>
-		<!-- OPTIONS -->
-		<input type="radio" name="option" value="1" checked>
-		<span class="js-ans1"> Arkangel tablet</span> <br>
-		<input type="radio" name="option" value="2" >
-		<span class="js-ans2"> Physical sensation hairnet</span> <br>
-		<input type="radio" name="option" value="3" >
-		<span class="js-ans3"> Conscious stuffed monkey </span> <br>
-		<input type="radio" name="option" value="4" >
-		<span class="js-ans4"> A human heart</span> <br> 
-		<h3>Question # <span class="js-qNum">1</span> of 10</h3>
-		<div>
-			<button type="submit">ENTER</button>
-		</div>
-	</form>
+	
+	<div class="formbox">
+		<!-- FORM -->
+		<form id ="js-qform">
+			<h2>
+				<span class="js-question">Which of these is NOT in the Black Museum's collection?</span>
+			</h2>
+			<h3>
+				<div class="righta">Correct Answers: <span class="js-score">0</span></div>
+			</h3>
+			<!-- OPTIONS -->
+			<input type="radio" name="option" value="1" id="val1" required>
+			<label for = 'val1'><span class="js-ans1"> Arkangel tablet</span></label>
+			<input type="radio" name="option" value="2" id="val2" >
+			<label for = 'val2'><span class="js-ans2"> Physical sensation hairnet</span></label>
+			<input type="radio" name="option" value="3" id="val3" >
+			<label for = 'val3'><span class="js-ans3"> Conscious stuffed monkey </span></label>
+			<input type="radio" name="option" value="4" id="val4" >
+			<label for = 'val4'><span class="js-ans4"> A human heart</span></label>
+			<h3>
+				<div class="righta">Question # <span class="js-qNum">1</span> of 10</div>
+			</h3>
+			<div>
+				<button type="submit">SUBMIT</button>
+			</div>
+		</form>
+	 <!-- RESULTS PAGE -->
 	<section id="js-final" hidden>
-		im hidden
+		Congratulations! You finished the quiz with a score of <span class="js-score">0</span> out of 10!
 	</section>
+	</div>
 </body>
 </html>
