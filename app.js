@@ -20,6 +20,7 @@ function checkAns() {
 	var c_ans = [4, 2, 3, 1, 3, 2, 3, 1, 2, 4]; 
 	var ans = parseInt($('input[name=option]:checked', '#js-qform').val());
 	if (ans === c_ans[questionNum-1]) {
+		score++;
 		displayAns(true);
 	} else {
 		displayAns(false);
@@ -29,7 +30,6 @@ function checkAns() {
 //display with the correct answer
 function displayAns(corr) {
 	if (corr === true) {
-		score++;
 		alert("Correct!")
 	} else {
 		alert("Incorrect!");
@@ -80,6 +80,7 @@ function update () {
 //display the finished quiz screen
 function finishedQuiz() {
 	$("#js-qform").hide();
+	$(".js-score").html(score); //update score
 	$("#js-final").show();
 }
 
